@@ -1,0 +1,23 @@
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+credentials*
+*.pem
+*.key
+*service-account*.json
+*-key.json
+
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+dist/
+build/
+*.egg-info/
+.coverage

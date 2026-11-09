@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="PF-09: AWS NetOps Firewall Automation">
+<style>
+text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace}
+.wire{stroke-dasharray:6 7;animation:wire 1.1s linear infinite}@keyframes wire{to{stroke-dashoffset:-26}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style>
+<rect width="1200" height="300" rx="20" fill="#FFFFFF"/>
+<g stroke="#D6D8E0" stroke-opacity=".35"><path d="M100 0V300"/><path d="M200 0V300"/><path d="M300 0V300"/><path d="M400 0V300"/><path d="M500 0V300"/><path d="M600 0V300"/><path d="M700 0V300"/><path d="M800 0V300"/><path d="M900 0V300"/><path d="M1000 0V300"/><path d="M1100 0V300"/><path d="M0 100H1200"/><path d="M0 200H1200"/></g>
+<rect x="56" y="58" width="104" height="40" rx="10" fill="none" stroke="#00A862" stroke-width="2"/>
+<text x="108" y="85" text-anchor="middle" font-size="20" font-weight="700" fill="#00A862">PF-09</text>
+<text x="56" y="160" font-size="40" font-weight="700" fill="#14141F">AWS NetOps Firewall Automation</text>
+<text x="56" y="208" font-size="19" fill="#555868">Check first. Change only what is blocked. Verify the traffic.</text>
+<g><path class="wire" d="M790 119C880 119 875 150 965 150" fill="none" stroke="#00A862" stroke-opacity=".6" stroke-width="2"/><path class="wire" d="M965 150C1055 150 1050 119 1140 119" fill="none" stroke="#00A862" stroke-opacity=".6" stroke-width="2"/><path class="wire" d="M790 181C880 181 875 150 965 150" fill="none" stroke="#00A862" stroke-opacity=".6" stroke-width="2"/><path class="wire" d="M965 150C1055 150 1050 181 1140 181" fill="none" stroke="#00A862" stroke-opacity=".6" stroke-width="2"/><circle cx="790" cy="119" r="15" fill="#F4F5F8" stroke="#00A862" stroke-width="2"/><circle cx="790" cy="181" r="15" fill="#F4F5F8" stroke="#00A862" stroke-width="2"/><circle cx="1140" cy="119" r="15" fill="#F4F5F8" stroke="#00A862" stroke-width="2"/><circle cx="1140" cy="181" r="15" fill="#F4F5F8" stroke="#00A862" stroke-width="2"/><rect x="931" y="116" width="68" height="68" rx="14" fill="#F4F5F8" stroke="#00A862" stroke-width="2.5"/></g>
+</svg>

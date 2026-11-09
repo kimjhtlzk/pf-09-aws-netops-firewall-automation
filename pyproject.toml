@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "aws-netops-firewall-automation"
+version = "1.0.0"
+description = "Check, apply, and verify security group changes across many AWS accounts."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Kim JunHyun" }]
+dependencies = ["boto3>=1.35,<2", "openpyxl>=3.1,<4", "PyYAML>=6,<7"]
+
+[project.optional-dependencies]
+demo = ["moto[ec2,elbv2,rds,sts]==5.0.26"]
+dev = ["aws-netops-firewall-automation[demo]", "pytest==8.3.4", "ruff==0.8.4", "mypy==1.14.1", "types-PyYAML==6.0.12.20241230"]
+
+[project.scripts]
+netops = "netops.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/netops"]
+
+[tool.ruff]
+line-length = 110
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "S", "C4", "SIM"]
+ignore = ["S101"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S105", "S106"]
+"src/netops/demo.py" = ["S105", "S106"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true
+files = ["src"]

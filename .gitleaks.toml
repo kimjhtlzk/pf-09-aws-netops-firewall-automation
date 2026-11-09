@@ -1,0 +1,39 @@
+title = "pf series gitleaks rules"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "aws-account-id-in-arn"
+description = "Real AWS account ID inside an ARN"
+regex = '''arn:aws:[a-z0-9-]*:[a-z0-9-]*:(\d{12})'''
+[[rules.allowlists]]
+regexTarget = "match"
+regexes = ['''111111111111''', '''000000000000''']
+
+[[rules]]
+id = "local-home-path"
+description = "Absolute path that exposes a local user name"
+regex = '''(/Users/[A-Za-z0-9._-]+|/home/[A-Za-z0-9._-]+|C:\\Users\\)'''
+
+[[rules]]
+id = "gcp-service-account"
+description = "Real GCP service account address"
+regex = '''[a-z0-9-]+@[a-z0-9-]+\.iam\.gserviceaccount\.com'''
+
+[[rules]]
+id = "public-ipv4"
+description = "IPv4 address outside RFC 1918, RFC 5737, and well-known placeholders"
+regex = '''\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b'''
+[[rules.allowlists]]
+regexTarget = "match"
+regexes = [
+  '''^0\.0\.0\.0$''',
+  '''^127\.0\.0\.1$''',
+  '''^10\.''',
+  '''^192\.168\.''',
+  '''^172\.(1[6-9]|2\d|3[01])\.''',
+  '''^192\.0\.2\.''',
+  '''^198\.51\.100\.''',
+  '''^203\.0\.113\.''',
+]

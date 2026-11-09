@@ -1,0 +1,22 @@
+# Copy to config.yaml and adjust. Leave a value out to use the default.
+region: ap-northeast-2
+
+# Empty means no proxy.
+proxy: ""                                # http://<proxy-host>:<port>
+
+# Path to your private CA file, needed when a TLS-inspecting proxy is in the way.
+ca_bundle: ""
+
+workspace: workspace
+output_prefix: aws                       # aws_ec2_inventory_YYYYMMDD.xlsx
+credentials_path: ~/.aws/credentials
+
+sso_start_url: "https://<your-sso-portal>.awsapps.com/start"
+sso_region: ap-northeast-2
+
+log_archive_profile: log-archive
+athena_database: vpc_flow_logs
+athena_output_location: "s3://example-log-archive-bucket/athena-results/"
+
+common_patterns: [comm, common]          # security group names worth recommending
+sg_max_rules: 60                         # AWS default per security group
